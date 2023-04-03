@@ -6,7 +6,17 @@ body{
     min-height: 200vh;
 }
 
+.container1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration:underline;
+    display: table;
+    background-color: #7008b6;
+    margin-left: 4%;
+    border-radius: 20px;
+    
 
+}
 
 
 footer {
