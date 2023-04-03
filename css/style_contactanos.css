@@ -16,6 +16,7 @@
  grid-gap: 50px;
  margin-top: 0;
  font-family: 'Open Sans';
+ color: aliceblue;
 
 
 }
@@ -37,7 +38,7 @@ display: inline-block;
 text-decoration: none;
 width: 100%;
 margin-bottom: 15px;
-color: black;
+color: rgb(5, 5, 5);
 font-weight: 700;
 
 }
