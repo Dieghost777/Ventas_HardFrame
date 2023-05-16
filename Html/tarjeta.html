@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styletarjeta.css">
+    <script>
+        function validartarjeta() {
+          const cardNumberInput = document.getElementById("card-number");
+          const cardExpiryInput = document.getElementById("card-expiry");
+          const cardCvcInput = document.getElementById("card-cvc");
+      
+          const cardNumberRegex = /^\d{16}$/;
+          if (!cardNumberRegex.test(cardNumberInput.value)) {
+            alert("Por favor, introduzca un número de tarjeta válido (16 dígitos)");
+            return false;
+          }
+      
+          const cardExpiryRegex = /^(0[1-9]|1[0-2])\/(\d{2})$/;
+          if (!cardExpiryRegex.test(cardExpiryInput.value)) {
+            alert("Por favor, introduzca una fecha de expiración válida (MM/AA)");
+            return false;
+          }
+      
+          const cardCvcRegex = /^\d{3}$/;
+          if (!cardCvcRegex.test(cardCvcInput.value)) {
+            alert("Por favor, introduzca un código de seguridad válido (3 dígitos)");
+            return false;
+          }
+      
+          return true;
+        }
+      </script>
+      
+      
+      
+      
+      
+ 
+      
+</head>
+<body>
+    <nav>
+        <nav class="navigation">
+            <ul>
+              <li><a href="/Index.html">Volver</a></li>
+
+            </ul>
+          </nav>
+
+          <form onsubmit="return validartarjeta()">
+            <div>
+              <label for="card-number">Número de tarjeta</label>
+              <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+              <span id="error-card-number" style="color: red;"></span>
+            </div>
+            <div>
+              <label for="card-expiry">Fecha de expiración</label>
+              <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA">
+              <span id="error-card-expiry" style="color: red;"></span>
+            </div>
+            <div>
+              <label for="card-cvc">Código de seguridad</label>
+              <input type="text" id="card-cvc" name="card-cvc" placeholder="CVC">
+              <span id="error-card-cvc" style="color: red;"></span>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+
+   
+       
+          
+      
+      
+</body>
+</html>

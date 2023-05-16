@@ -1,0 +1,16 @@
+{
+    "productos": [
+      {
+        "nombre": "Ram",
+        "precio": 1000,
+        "descripcion": "Memoria Ram G Skill",
+        "imagen": "/recursos/kingston.jpg"
+      },
+      {
+        "nombre": "CPU INTEL I7",
+        "precio": 400,
+        "descripcion": "I7 7700K",
+        "imagen": ""
+      }
+    ]
+  }
