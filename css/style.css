@@ -2,11 +2,9 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 200vh;
+    grid-template-columns: minmax(auto,1280px);
     background: #6441A5;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2a0845, #6441A5);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -27,8 +25,9 @@ body {
 
 
 footer {
+    grid-template-columns: minmax(auto, 1280px);
     width: 100%;
-    position: absolute;
+    position: flex;
     bottom: 0;
     left: 0;
     padding: 2rem 8%;
@@ -41,44 +40,39 @@ footer {
 
 .container-icon,
 .footer-menu-container {
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 1rem;
-
 }
 
 .social-icon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
+    height: 5vw;
+    width: 5vw;
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 50%;
     border: 1px solid #f2f2f2;
     background-color: #f2f2f2;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40%;
     margin: 1rem;
-
-
 }
 
 .social-icon:hover {
-
     background-color: #ffffff;
     filter: invert(1);
 }
 
 .footer-menu-container {
-
     list-style-type: none;
     color: #f2f2f2;
-    font-size: 18px;
+    font-size: 1.5vw;
 }
 
 .menu-item {
-
     margin: 1rem 1.5rem;
     cursor: pointer;
     opacity: 0.6;
@@ -194,4 +188,12 @@ section h4{
 section h4:hover {
   color: #000000;
   cursor: default;
+}
+
+.row{
+    background-color:#ffffff;
+    color: #000000; 
+    border-radius: 2%;
+    border: #000000;
+    border-style:groove;
 }

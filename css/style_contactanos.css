@@ -1,75 +1,144 @@
-
-@import url();
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.container-form{
- width: 100%;
- max-width: 1100px;
- margin: auto;
- display:grid;
- grid-template-columns: repeat(2,1fr);
- grid-gap: 50px;
- margin-top: 0;
- font-family: 'Open Sans';
- color: aliceblue;
-
-
+.container {
+  max-width: 400px;
+  margin: 20px auto; /* Agregado top y bottom margin */
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container-form h2 {
-    margin-bottom: 15px;
-    font-size: 35px;
-}
-.container-form p {
-font-size: 17px;
-line-height: 1.6;
-margin-bottom: 30;
-
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.container-form a {
-font-size: 17px;
-display: inline-block;
-text-decoration: none;
-width: 100%;
-margin-bottom: 15px;
-color: rgb(5, 5, 5);
-font-weight: 700;
-
+.form-group {
+  margin-bottom: 20px;
 }
 
-.container-form form .campo, textarea{
-width: 100%;
-padding: 15px 10px;
-font-size: 15px;
-border: 1px solid #dbdbdb;
-margin-bottom: 20px;
-border-radius: 3px;
-outline: 0px;
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.container-form form textarea{
-
-max-width: 530px;
-min-width: 530px;
-min-height: 140px;
-max-height: 150px;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.container-form .btn-enviar {
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    outline: 0;
-    background-color: blueviolet;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 300ms ease;
+.form-group textarea {
+  height: 120px;
+}
 
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #45a049;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+
+footer {
+  grid-template-columns: minmax(auto, 1280px);
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2rem 8%;
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-icon,
+.footer-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  height: 5vw;
+  width: 5vw;
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 50%;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  margin: 1rem;
+}
+
+.social-icon:hover {
+  background-color: #ffffff;
+  filter: invert(1);
+}
+
+.footer-menu-container {
+  list-style-type: none;
+  color: #f2f2f2;
+  font-size: 1.5vw;
+}
+
+.menu-item {
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+.copyright {
+
+  color: #f2f2f2;
+}
+
+.social-icon:nth-last-of-type(1) {
+
+  background-image: url(/recursos/facebook.png);
+}
+
+.social-icon:nth-last-of-type(2) {
+
+  background-image: url(/recursos/instagram.png);
+}
+
+.social-icon:nth-last-of-type(3) {
+
+  background-image: url(/recursos/whatsapp.png);
+}
+
+.social-icon:nth-last-of-type(4) {
+
+  background-image: url(/recursos/twitter.png);
 }
