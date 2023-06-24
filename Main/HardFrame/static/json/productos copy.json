@@ -1,0 +1,42 @@
+{
+    "productos11": [
+      {
+        "nombre": "AEROCOOL",
+        "precio": 139990,
+        "descripcion": "Fuente de Poder 600W Aerocool Cylon, Diseño RGB, Certificada 80+ Plus White",
+        "imagen": "/recursos/aerocool.jpg",
+        "enlace":"/Html/Reserva.Html" 
+      },
+      {
+        "nombre": "INTEL I7",
+        "precio": 449980,
+        "descripcion": "Procesador Intel Core i7-11700K, LGA1200, 3,6Ghz, 8 Núcleos, 16 Hilos, 16MB Caché, Sin ventilador",
+        "imagen": "/recursos/intel_i7.jpg",
+        "enlace":"/Html/Reserva.Html" 
+        
+      },
+      {
+        "nombre": "Steam Deck",
+        "precio": 679990,
+        "descripcion": "Valve Steam Deck, 256GB, CPU Zen 2,4GHZ, GPU RDNA, SSD NVMe 256GB, IPS, 60Hz",
+        "imagen": "/recursos/steamdeck.png",
+        "enlace":"/Html/Reserva.Html" 
+      },
+      {
+        "nombre": "THUNDERX3",
+        "precio": 139990,
+        "descripcion": "Silla Gamer Profesional ThunderX3 TC3, Hasta 150kg, Reclinación 135º, Sakura White",
+        "imagen": "/recursos/sillagamer.jpg",
+        "enlace":"/Html/Reserva.Html" 
+      }
+      ,
+      {
+        "nombre": "PRIMUS GAMING",
+        "precio": 36990,
+        "descripcion": "Audífonos Gamer Primus Gaming Mandalorian Limited Edition, Over-Ear, 3.5mm, Gris/Café",
+        "imagen": "/recursos/primus.jpg",
+        "enlace":"/Html/Reserva.Html" 
+      }
+      
+    ]
+  }
