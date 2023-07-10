@@ -7,7 +7,7 @@ class periferico(models.Model):
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=0)
     imagen           = models.ImageField(upload_to="perifericos",null=True)
-    enlace           = models.URLField()
+    
     def __str__(self):
         return str(self.nombre)
     
@@ -17,7 +17,7 @@ class software(models.Model):
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=0)
     imagen           = models.ImageField(upload_to="softwares",null=True)
-    enlace           = models.URLField()
+    
     def __str__(self):
         return str(self.nombre)
 class componente(models.Model):
@@ -26,7 +26,7 @@ class componente(models.Model):
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=0)
     imagen           = models.ImageField(upload_to="componentes",null=True)
-    enlace           = models.URLField()
+    
     def __str__(self):
         return str(self.nombre)
     
@@ -36,6 +36,6 @@ class oferta(models.Model):
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=2)
     imagen           = models.ImageField(upload_to="oferta",null=True)
-    enlace           = models.URLField()
+    
     def __str__(self):
         return str(self.nombre)
