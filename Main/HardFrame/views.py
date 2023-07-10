@@ -14,8 +14,8 @@ def componentes(request):
     return render(request,'componentes.html',data)
 
 def perifericos(request):
-    productos = producto.objects.all()
-    data = {'productos': productos}
+    perifericos = periferico.objects.all()
+    data = {'perifericos': perifericos}
     return render(request, 'perifericos.html', data)
 
 def softwares(request):

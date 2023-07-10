@@ -62,17 +62,19 @@
     
       </nav>
     <h1>Agregar nuevo Periferico </h1>
-    <form action="agregarProducto" method="post">
-        {% csrf_token %}
-        
-        <pre>Nombre Producto:                    <input type="text" name="nombreProducto"></pre>
-        <pre>descripcion:                        <input type="text" name="descripcionProducto"></pre>
-        <pre>precio:                             <input type="number" name="precioProducto"></pre>
-        <pre>imagen:                             <input type="file" name="imagenProducto"></pre>
-        <pre>enlace:                             <input type="url" name="enlaceProducto"></pre>
-        <input type="submit" name="opcion" value="Agregar">
-
+    <form action="{% url 'agregarProducto' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <pre>ID Producto:                        <input type="text" name="idProducto"></pre>
+      <pre>Nombre Producto:                    <input type="text" name="nombreProducto"></pre>
+      <pre>Descripción:                        <input type="text" name="descripcionProducto"></pre>
+      <pre>Precio:                             <input type="number" name="precioProducto"></pre>
+      <pre>Imagen:                             <input type="file" name="imagenProducto"></pre>
+      <pre>Enlace:                             <input type="url" name="enlaceProducto"></pre>
+      <input type="submit" name="opcion" value="Agregar">
     </form>
+    
+    
+    
     <br></bra><a href="{% url 'administracion' %}">Volver a Administración</a>
 
     <div id="idMensaje">

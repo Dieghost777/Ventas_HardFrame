@@ -1,18 +1,18 @@
 from django.db import models
 
 # Create your models here.
-class producto(models.Model):
-    id_Produc        = models.AutoField(primary_key=True, max_length=10)
+class periferico(models.Model):
+    id_Produc        = models.AutoField(primary_key=True)
     nombre           = models.CharField(max_length=30)
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=0)
-    imagen           = models.ImageField(upload_to="productos",null=True)
+    imagen           = models.ImageField(upload_to="perifericos",null=True)
     enlace           = models.URLField()
     def __str__(self):
         return str(self.nombre)
     
 class software(models.Model):
-    id_Produc        = models.AutoField(primary_key=True, max_length=10)
+    id_Produc        = models.AutoField(primary_key=True)
     nombre           = models.CharField(max_length=30)
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=0)
@@ -21,7 +21,7 @@ class software(models.Model):
     def __str__(self):
         return str(self.nombre)
 class componente(models.Model):
-    id_Produc        = models.AutoField(primary_key=True, max_length=10)
+    id_Produc        = models.AutoField(primary_key=True)
     nombre           = models.CharField(max_length=30)
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=0)
@@ -31,7 +31,7 @@ class componente(models.Model):
         return str(self.nombre)
     
 class oferta(models.Model):
-    id_Produc        = models.AutoField(primary_key=True, max_length=10)
+    id_Produc        = models.AutoField(primary_key=True)
     nombre           = models.CharField(max_length=30)
     descripcion      = models.CharField(max_length=100) 
     precio           = models.DecimalField(max_digits=10, decimal_places=2)
