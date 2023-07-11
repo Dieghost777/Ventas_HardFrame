@@ -34,8 +34,14 @@ urlpatterns = [
     path('quienessomos/',quienessomos,name='quienessomos'),
     path('administracion/',administracion,name='administracion'),
     path('agregarProducto/',agregarProducto,name='agregarProducto'),
+    path('modificarPeriferico/<int:pk>/', modificarPeriferico, name='modificarPeriferico'),
+    path('eliminarPeriferico/<int:pk>/', eliminarPeriferico, name='eliminarPeriferico'),
     path('agregarSoftware/',agregarSoftware,name='agregarSoftware'),
+    path('modificarSoftware/<int:pk>/', modificarSoftware, name='modificarSoftware'),
+    path('eliminarSoftware/<int:pk>/', eliminarSoftware, name='eliminarSoftware'),
     path('agregarComponente/',agregarComponente,name='agregarComponente'),
+    path('modificarComponente/<int:pk>/', modificarComponente, name='modificarComponente'),
+    path('eliminarComponente/<int:pk>/', eliminarComponente, name='eliminarComponente'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

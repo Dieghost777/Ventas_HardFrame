@@ -34,35 +34,13 @@
               <li><a class="dropdown-item" href="{% url 'agregarComponente' %}">Agregar componentes</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Eliminar Productos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="{% url 'componentes' %}">Componentes</a></li>
-              <li><a class="dropdown-item" href="{% url 'perifericos' %}">Perifericos</a></li>
-              <li><a class="dropdown-item" href="{% url 'software' %}">Sofware</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Modificar Productos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="{% url 'componentes' %}">Componentes</a></li>
-              <li><a class="dropdown-item" href="{% url 'perifericos' %}">Perifericos</a></li>
-              <li><a class="dropdown-item" href="{% url 'software' %}">Sofware</a></li>
-            </ul>
-          </li>
       </div>
       </ul>
     </div>
 
   </nav>
   <div class="container">
-    <div class="card" style="width: 50rem;">
+    <div class="card "style="width: 60rem;" >
       <h1>Agregar nuevo Componente</h1>
         <form action="{% url 'agregarComponente' %}" method="post" enctype="multipart/form-data">
           {% csrf_token %}

@@ -10,10 +10,32 @@ body {
 }
 
 .container {
-    display: flex;
+    display: table;
     justify-content: center;
     align-items: center;
     height: 50vh;
 }
 
 
+.table{
+    background: white;
+    display:table;
+    height:100%;
+}
+.container h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom:auto;
+  }
+
+
+.container h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom:auto;
+  }
+
+.card{
+    margin-bottom:auto;
+
+}
