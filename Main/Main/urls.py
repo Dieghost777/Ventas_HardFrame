@@ -44,6 +44,9 @@ urlpatterns = [
     path('eliminarComponente/<int:pk>/', eliminarComponente, name='eliminarComponente'),
     path('inicio/', inicio, name='inicio'),  
     path('login/', login_view, name='login'),
+    path('admins/',admins,name='admins'),
+
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

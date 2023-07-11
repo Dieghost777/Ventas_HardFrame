@@ -13,6 +13,9 @@ def inicio(request):
     context={}
     return render(request, 'inicio.html', context)
 
+def admins(request):
+    context={}
+    return render(request, 'admins.html', context)
 
 def index(request):
     context={}

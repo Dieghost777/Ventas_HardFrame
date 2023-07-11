@@ -1,100 +1,42 @@
-/* styleAdmin.css */
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: minmax(auto,1280px);
+    background: #4341a5;
+    /* fallback for old browsers */
+    background: linear-gradient(to right, #2a0845, #6441A5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-/* Estilo para el encabezado de la página */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+.container {
+    display: flex;
+    display: table;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+
+.table{
+    background: white;
+    display:table;
+    height:100%;
+}
+.container h1 {
+    color: rgb(0, 0, 0);
     text-align: center;
+    margin-bottom:auto;
   }
-  
-  /* Estilo para la barra de navegación */
-  .navbar {
-    background-color: #333;
+
+
+.container h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom:auto;
   }
-  
-  .navbar-brand {
-    color: #fff;
-  }
-  
-  .nav-link {
-    color: #fff;
-  }
-  
-  /* Estilo para las tablas */
-  .table {
-    margin-top: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-  }
-  
-  .table th,
-  .table td {
-    vertical-align: middle;
-    padding: 8px 12px;
-  }
-  
-  .table th {
-    background-color: #6c757d;
-    color: #fff;
-  }
-  
-  .table td button {
-    margin-right: 5px;
-  }
-  
-  /* Estilo para los botones de modificar y eliminar */
-  .btn-modificar,
-  .btn-eliminar,
-  .btn-modificar-1,
-  .btn-eliminar-1,
-  .btn-modificar-2,
-  .btn-eliminar-2 {
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 5px;
-  }
-  
-  .btn-modificar {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-  }
-  
-  .btn-eliminar {
-    background-color: #dc3545;
-    color: #000000;
-    border-color: #dc3545;
-  }
-  
-  .btn-modificar-1 {
-    background-color: #6c757d;
-    color: #fff;
-    border-color: #6c757d;
-  }
-  
-  .btn-eliminar-1 {
-    background-color: #dc3545;
-    color: #fff;
-    border-color: #dc3545;
-  }
-  
-  .btn-modificar-2 {
-    background-color: #198754;
-    color: #fff;
-    border-color: #198754;
-  }
-  
-  .btn-eliminar-2 {
-    background-color: #dc3545;
-    color: #fff;
-    border-color: #dc3545;
-  }
-  
-  /* Estilo para el fondo de la página */
-  body {
-    background: linear-gradient(to bottom, #8c51ff, #007bff);
-  }
-  
+
+.card{
+    margin-bottom:auto;
+
+}

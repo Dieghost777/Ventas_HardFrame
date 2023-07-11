@@ -11,34 +11,36 @@
   <link rel="stylesheet" href="{% static 'css/styleAdmin.css' %}">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'administracion' %}">HardFrame</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item ">
-            <a class="nav-link active" aria-current="page" href="{% url 'administracion' %}">administracion</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Agregar Productos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="{% url 'agregarProducto' %}">Agregar Perifericos</a></li>
-              <li><a class="dropdown-item" href="{% url 'agregarSoftware' %}">Agregar software</a></li>
-              <li><a class="dropdown-item" href="{% url 'agregarComponente' %}">Agregar componentes</a></li>
+        <a class="navbar-brand" href="{% url 'administracion' %}">HardFrame</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admins' %}">Datos Admin</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Agregar Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'agregarProducto' %}">Agregar Perifericos</a></li>
+                        <li><a class="dropdown-item" href="{% url 'agregarSoftware' %}">Agregar software</a></li>
+                        <li><a class="dropdown-item" href="{% url 'agregarComponente' %}">Agregar componentes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'administracion' %}">Administracion</a>
+                </li>
             </ul>
-          </li>
-      </div>
-      </ul>
+        </div>
     </div>
-
-  </nav>
+</nav>
   <div class="container">
     <div class="card" style="width: 50rem;">
     <h1>Modificar Periferico </h1>
