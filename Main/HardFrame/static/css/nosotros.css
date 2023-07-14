@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos de la barra de navegación */
+  .navbar {
+    background-color: #333;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    color: #fff;
+  }
+  
+  /* Estilos de la sección de Quienes somos */
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #texto-oculto {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  #ocultar-btn {
+    background-color: #fca311;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #ocultar-btn:hover {
+    background-color: #ffcc00;
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    grid-template-columns: minmax(auto, 1280px);
+    width: 100%;
+    position: flex;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-icon,
+.footer-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    height: 5vw;
+    width: 5vw;
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    margin: 1rem;
+}
+
+.social-icon:hover {
+    background-color: #ffffff;
+    filter: invert(1);
+}
+
+.footer-menu-container {
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 1.5vw;
+}
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.copyright {
+
+    color: #f2f2f2;
+}
+
+.social-icon:nth-last-of-type(1) {
+
+    background-image: url("../recursos/facebook.png");
+}
+
+.social-icon:nth-last-of-type(2) {
+
+    background-image: url("../recursos/instagram.png");
+}
+
+.social-icon:nth-last-of-type(3) {
+
+    background-image: url("../recursos/whatsapp.png");
+}
+
+.social-icon:nth-last-of-type(4) {
+
+    background-image: url("../recursos/twitter.png");
+}

@@ -13,6 +13,8 @@
   
 </head>
 <body>
+  {% if user.is_authenticated and user.is_staff %}
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'administracion' %}">HardFrame</a>
@@ -158,5 +160,17 @@
       <script src="{% static 'js/modificarComponente.js' %}"></script>
       <script src="{% static 'js/modificarSoftware.js' %}"></script>
       <script src="{% static 'js/modificarPeriferico.js' %}"></script>
+
+      {% else %}
+      <div class="container-admins">
+        <div class="card">
+          <div class="card-body">
+            <h2>Acceso restringido</h2>
+            <p>Esta página solo está disponible para administradores.</p>
+            <a class="btn btn-warning" href="{% url 'inicio' %}">Iniciar Sesión</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
   </body>
 </html>

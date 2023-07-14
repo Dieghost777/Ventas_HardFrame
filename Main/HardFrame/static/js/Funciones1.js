@@ -47,4 +47,9 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
+
+  $(document).ready(function() {
+    $("#ocultar-btn").click(function() {
+      $(".col-6").hide();
+    });
+  });

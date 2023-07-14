@@ -11,64 +11,83 @@
     <link rel="icon" type="image/x-icon" href="../static/recursos/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'index' %}">HardFrame</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">INICIO</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorias
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="{% url 'componentes' %}">Componentes</a></li>
-                  <li><a class="dropdown-item" href="{% url 'perifericos' %}">Perifericos</a></li>
-                  <li><a class="dropdown-item" href="{% url 'software' %}">Sofware</a></li>
+            <a class="navbar-brand" href="{% url 'index' %}">HardFrame</a>
+            {% if user.is_authenticated %}
+            <div class="mensaje-bienvenida">Bienvenido {{ user.username }}</div>
+            {% endif %}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">INICIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'componentes' %}">Componentes</a></li>
+                            <li><a class="dropdown-item" href="{% url 'perifericos' %}">Perifericos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'software' %}">Sofware</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'ofertas' %}">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contactanos' %}">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'quienessomos' %}">¿Quienes somos?</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li> <a class="nav-link" href="{% url 'datos' %}">Datos de Sesión</a></li>
+                     {% endif %}
+                    <li>
+                      {% if user.is_authenticated %}
+                      <li><a class="nav-link" href="" onclick="">Cerrar sesión</a></li>
+    
+                      {% endif %}
+                    </li>
+                    
+                    {% if user.is_authenticated and user.is_staff %}
+                    <a class="nav-link" href="{% url 'administracion' %}">Administracion</a>
+                    {% endif %}
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'ofertas' %}">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contactanos' %}">Contactanos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'quienessomos' %}">¿Quienes somos?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'datos' %}">Datos de Sesión</a>
-              </li>
-              <li>   <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a></li>
-            </ul>
-            <a class="btn btn-warning" href="{% url 'inicio' %}">Iniciar Sesión</a>
-          </div>
+                <a class="btn btn-warning" href="{% url 'inicio' %}">Iniciar Sesión</a>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-  <article>
-    <div class="login-container">
-        <div class="user-icon"></div>
-        <h2>Iniciar sesión</h2>
-        <form method="post" action="{% url 'login' %}">
+
+
+      <article>
+        <div class="login-container">
+          <div class="user-icon"></div>
+          <h2>Iniciar sesión</h2>
+          <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
             <input type="text" name="username" placeholder="Nombre de usuario" />
             <input type="password" name="password" placeholder="Contraseña" />
             <button type="submit">Iniciar sesión</button>
-        </form>
-    </div>
-  </article>
+          </form>
+          {% if form.errors %}
+            <h1 class="error-message">Inicio de sesión incorrecto. Verifica tus credenciales.</h1>
+          {% endif %}
+        </div>
+      </article>
 </body>
 
 </html>
