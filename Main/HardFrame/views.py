@@ -8,7 +8,14 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.admin.views.decorators import staff_member_required
 
+def register(request):
+    context={}
+    return render(request,'register.html', context)
 
+
+def datos (request):
+    context={}
+    return  render(request,'datos.html', context)
 def inicio(request):
     context={}
     return render(request, 'inicio.html', context)
@@ -73,7 +80,8 @@ def login_view(request):
             if user.is_superuser:
                 return redirect('administracion')  
             else:
-                return redirect('index.html')  
+                return redirect('index')  
         else:
             messages.error(request, 'Nombre de usuario o contraseña incorrectos')
     return render(request, 'inicio.html')
+

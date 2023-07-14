@@ -21,7 +21,13 @@ from administracion.views import *
 from django.urls import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+
 urlpatterns = [
+
+
+    path('logout/', auth_views.LogoutView.as_view(next_page='index'), name='logout'),
+    path('datos',datos,name='datos'),
     path('admin/', admin.site.urls),
     path('',index,name='index'),
     path('componentes/',componentes,name='componentes'),
