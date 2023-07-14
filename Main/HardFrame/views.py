@@ -70,6 +70,8 @@ def targeta(request):
 def administracion(request):
     return render(request, 'administracion.html')
 
+from django.contrib import messages
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -83,5 +85,7 @@ def login_view(request):
                 return redirect('index')  
         else:
             messages.error(request, 'Nombre de usuario o contraseña incorrectos')
-    return render(request, 'inicio.html')
 
+    error_message = messages.get_messages(request)
+    context = {'error_message': error_message}
+    return render(request, 'inicio.html', context)
