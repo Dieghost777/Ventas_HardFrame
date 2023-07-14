@@ -56,7 +56,7 @@
                  {% endif %}
                 <li>
                   {% if user.is_authenticated %}
-                  <li><a class="nav-link" href="" onclick="">Cerrar sesión</a></li>
+                  <li><a class="nav-link" href="{% url 'logout' %}" onclick="">Cerrar sesión</a></li>
 
                   {% endif %}
                 </li>
